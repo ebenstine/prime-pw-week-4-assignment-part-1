@@ -30,6 +30,7 @@ function addNumbers(firstNumber, secondNumber) {
   return answer;
   // return firstNumber + secondNumber;
 }
+
 console.log('First Number + Second Number', addNumbers(5,7));
 console.log('First Number + Second Number', addNumbers(1503, 44492.349));
 
@@ -61,6 +62,8 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
+
+
 let array = ['John', 'Paul', 'George', 'Ringo'];
 function getLast( array ) {
   if (array.length > 0){
@@ -76,7 +79,7 @@ console.log('Last item should be Ringo:', getLast(array)); //Should log Ringo.
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 function find( value, array ){
-
+  if ()
 
 }
 
