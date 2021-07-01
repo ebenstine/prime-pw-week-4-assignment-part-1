@@ -128,15 +128,16 @@ console.log('Sum should be 31459', sumAll([numberArray]));
 
 function positiveArray(array) {
   let newArray = [];
-  for (let i = 0; i < newArray.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (array[i] > 0){
     newArray.push(array[i]);
   }
 }
   return newArray;
 }
-console.log('Array should show 2,12,22', positiveArray([-18,-8,0,2,12,22]));
+console.log('Array should show pi', positiveArray([31,45,9,26,59,-6,-6]));
 console.log('Array should return empty', positiveArray([-30,-15,0,-15,-30]));
     //11. Pick a problem from Edabit(https://edabit.com/) or
     //     CodeWars(https://www.codewars.com/). Then describe it
     //     here in a comment, write the function, and test it!
+    
