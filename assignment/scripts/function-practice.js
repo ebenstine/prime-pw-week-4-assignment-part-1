@@ -84,36 +84,59 @@ function find(value, array) {
     if (value === array[i]) {
       return true;
     }
-  }//endFORLOOP
+  } //endFORLOOP
   if (value !== array[i]) {
     return false;
   }
 }
-console.log(find(12, [12,22,32,42,52 ]));
-console.log(find(62, [12,22,32,42,52]));
-  // ----------------------
-  // Stretch Goals
-  // ----------------------
-  // 8. Function to check if a letter is the first letter in a
-  //    string. Return true if it is, and false otherwise
-  function isFirstLetter(letter, string) {
-
+console.log(find(12, [12, 22, 32, 42, 52]));
+console.log(find(62, [12, 22, 32, 42, 52]));
+// ----------------------
+// Stretch Goals
+// ----------------------
+// 8. Function to check if a letter is the first letter in a
+//    string. Return true if it is, and false otherwise
+let string = 'a + b + c + x + w + z'; //created string variable
+function isFirstLetter(letter, string) {
+  if (letter === string[0]) { //created conditional to check the value of the first letter
+    return true;
+  } else {
+    return false;
   }
-  console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
-  console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
+}
 
-  // 9. Function to return the sum of all numbers in an array
-  function sumAll() {
-    let sum = 0
-    // TODO: loop to add items
-    return sum;
+console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
+console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
+
+// 9. Function to return the sum of all numbers in an array
+
+let numberArray = [500, 600, 20000, 10300, 59]
+
+function sumAll(array) {
+  let sum = 0
+  // TODO: loop to add items
+  for (let i = 0; i < numberArray.length; i++) { //made a for loop to loop to find the sum of all the numbers
+    sum += numberArray[i];
   }
+  return sum;
+}
+console.log('Sum should be 31459', sumAll([numberArray]));
 
-  // 10. Function to return a new array of all positive (greater than zero)
-  //     numbers contained in an input array. If there are no positive numbers
-  //     return an empty array. Note: The input array should not change.
+// 10. Function to return a new array of all positive (greater than zero)
+//     numbers contained in an input array. If there are no positive numbers
+//     return an empty array. Note: The input array should not change.
 
-
-  //11. Pick a problem from Edabit(https://edabit.com/) or
-  //     CodeWars(https://www.codewars.com/). Then describe it
-  //     here in a comment, write the function, and test it!
+function positiveArray(array) {
+  let newArray = [];
+  for (let i = 0; i < newArray.length; i++) {
+    if (array[i] > 0){
+    newArray.push(array[i]);
+  }
+}
+  return newArray;
+}
+console.log('Array should show 2,12,22', positiveArray([-18,-8,0,2,12,22]));
+console.log('Array should return empty', positiveArray([-30,-15,0,-15,-30]));
+    //11. Pick a problem from Edabit(https://edabit.com/) or
+    //     CodeWars(https://www.codewars.com/). Then describe it
+    //     here in a comment, write the function, and test it!
