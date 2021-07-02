@@ -30,7 +30,7 @@ function addNumbers(firstNumber, secondNumber) {
   return answer;
   // return firstNumber + secondNumber;
 }
-
+//Testing the addNumbers function
 console.log('First Number + Second Number', addNumbers(5, 7));
 console.log('First Number + Second Number', addNumbers(1503, 44492.349));
 
@@ -72,7 +72,8 @@ function getLast(array) {
     return 'undefined';
   }
 }
-console.log('Last item should be Ringo:', getLast(array)); //Should log Ringo.
+console.log('Last item should be Ringo:', getLast(array));
+//Should log Ringo.
 //Also ran a test with empty array to log undefined.
 
 // 7. Function to find a value in an array. Return true if the
@@ -84,7 +85,7 @@ function find(value, array) {
     if (value === array[i]) {
       return true;
     }
-  } //endFORLOOP
+  }
   if (value !== array[i]) {
     return false;
   }
@@ -96,9 +97,11 @@ console.log(find(62, [12, 22, 32, 42, 52]));
 // ----------------------
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
-let string = 'a + b + c + x + w + z'; //created string variable
+//Creating a string variable
+let string = 'a + b + c + x + w + z';
+//Creating a conditional to check the value of the first letter
 function isFirstLetter(letter, string) {
-  if (letter === string[0]) { //created conditional to check the value of the first letter
+  if (letter === string[0]) {
     return true;
   } else {
     return false;
@@ -115,7 +118,8 @@ let numberArray = [500, 600, 20000, 10300, 59]
 function sumAll(array) {
   let sum = 0
   // TODO: loop to add items
-  for (let i = 0; i < numberArray.length; i++) { //made a for loop to loop to find the sum of all the numbers
+  //Making a for loop to loop to find the sum of all the numbers
+  for (let i = 0; i < numberArray.length; i++) {
     sum += numberArray[i];
   }
   return sum;
@@ -129,15 +133,23 @@ console.log('Sum should be 31459', sumAll([numberArray]));
 function positiveArray(array) {
   let newArray = [];
   for (let i = 0; i < array.length; i++) {
-    if (array[i] > 0){
-    newArray.push(array[i]);
+    if (array[i] > 0) {
+      newArray.push(array[i]);
+    }
   }
-}
   return newArray;
 }
-console.log('Array should show pi', positiveArray([31,45,9,26,59,-6,-6]));
-console.log('Array should return empty', positiveArray([-30,-15,0,-15,-30]));
-    //11. Pick a problem from Edabit(https://edabit.com/) or
-    //     CodeWars(https://www.codewars.com/). Then describe it
-    //     here in a comment, write the function, and test it!
-    
+//Testing the function
+console.log('Array should return pi', positiveArray([31, 45, 9, 26, 59, -6, -6]));
+console.log('Array should return empty', positiveArray([-30, -15, 0, -15, -30]));
+//11. Pick a problem from Edabit(https://edabit.com/) or
+//     CodeWars(https://www.codewars.com/). Then describe it
+//     here in a comment, write the function, and test it!
+
+//Creating a function to convert hours into seconds.
+//We declare the variable seconds equal to the right math, and log the function to test.
+function howManySeconds(hours) {
+  let seconds = (hours * 60) *60;
+  return seconds
+}
+console.log(howManySeconds(2));
