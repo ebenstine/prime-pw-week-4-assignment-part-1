@@ -32,13 +32,14 @@ function addNumbers(firstNumber, secondNumber) {
 }
 //Testing the addNumbers function
 console.log('First Number + Second Number', addNumbers(5, 7));
-console.log('First Number + Second Number', addNumbers(1503, 44492.349));
+console.log('First Number + Second Number', addNumbers(21405, 10054));
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree(firstNumber, secondNumber, thirdNumber) {
   let answer = firstNumber * secondNumber * thirdNumber;
   return answer;
 }
+//Testing the multiplyThree function, should return 60.
 console.log('First Number * Second Number * Third Number', multiplyThree(3, 4, 5));
 
 
@@ -72,9 +73,9 @@ function getLast(array) {
     return 'undefined';
   }
 }
-console.log('Last item should be Ringo:', getLast(array));
-//Should log Ringo.
+//Testing getLast function; should return Ringo.
 //Also ran a test with empty array to log undefined.
+console.log('Last item should be Ringo:', getLast(array));
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
@@ -90,6 +91,7 @@ function find(value, array) {
     return false;
   }
 }
+//Testing for loop to find value in the array.
 console.log(find(12, [12, 22, 32, 42, 52]));
 console.log(find(62, [12, 22, 32, 42, 52]));
 // ----------------------
@@ -97,8 +99,7 @@ console.log(find(62, [12, 22, 32, 42, 52]));
 // ----------------------
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
-//Creating a string variable
-let string = 'a + b + c + x + w + z';
+
 //Creating a conditional to check the value of the first letter
 function isFirstLetter(letter, string) {
   if (letter === string[0]) {
@@ -107,7 +108,7 @@ function isFirstLetter(letter, string) {
     return false;
   }
 }
-
+//Testing isFirstLetter function
 console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
 console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
 
@@ -124,7 +125,8 @@ function sumAll(array) {
   }
   return sum;
 }
-console.log('Sum should be 31459', sumAll([numberArray]));
+//Testing the sumAll function; should log as the first few digits of pi
+console.log('Sum should be pi', sumAll([numberArray]));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
@@ -140,8 +142,8 @@ function positiveArray(array) {
   return newArray;
 }
 //Testing the function
-console.log('Array should return pi', positiveArray([31, 45, 9, 26, 59, -6, -6]));
-console.log('Array should return empty', positiveArray([-30, -15, 0, -15, -30]));
+console.log('Should return pi in separated integers', positiveArray([31, 45, 9, 26, 59, -6, -6]));
+console.log('Should return empty', positiveArray([-30, -15, 0, -15, -30]));
 //11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
@@ -149,7 +151,8 @@ console.log('Array should return empty', positiveArray([-30, -15, 0, -15, -30]))
 //Creating a function to convert hours into seconds.
 //We declare the variable seconds equal to the right math, and log the function to test.
 function howManySeconds(hours) {
-  let seconds = (hours * 60) *60;
+  let seconds = (hours * 60) * 60;
   return seconds
 }
+//Test should show 7200
 console.log(howManySeconds(2));
